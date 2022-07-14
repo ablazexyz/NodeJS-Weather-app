@@ -1,7 +1,3 @@
-console.log('Client Side JS loaded')
-
-
-
 const formData = document.querySelector('form')
 const message1 = document.querySelector('#message-1')
 const message2 = document.querySelector('#message-2')
