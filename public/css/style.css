@@ -1,0 +1,50 @@
+h1{
+    color: rgb(43, 226, 89)
+}
+img{
+    width: 200px;
+}
+header{
+    border-bottom: 2px black;
+    margin-bottom: 25px;
+
+}
+footer{
+    color: grey;
+    padding: 5px;
+    border-top: 2px solid rgb(145, 144, 144);
+    margin-top: 10px;
+}
+header a{
+    color: grey;
+    margin-right: 10px;
+    text-decoration: none;
+}
+body{
+    max-width: 500px;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content{
+    flex-grow: 1;
+}
+input{
+    border: 1px solid #cccc;
+    padding: 5px;
+}
+button{
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border: 1px solid #cccc;
+    padding: 5px;
+}
+.heading{
+    margin-bottom: 20px;
+    color: rgb(65, 225, 137)
+}
