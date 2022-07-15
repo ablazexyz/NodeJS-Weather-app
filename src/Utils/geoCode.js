@@ -7,7 +7,7 @@ const geoCode = (address,callback)=>{
             if(err){
                 callback('unable to reach Geoservice',undefined)
             }else if(res.body.features.length === 0){
-                callback('unable to find this Location. Try Searching Again!',undefined)
+                callback('Bhai kya kr raha hai tu!! Try Searching Again!',undefined)
             }else{
                 const lat = res.body.features[0].center[1];
                 const long = res.body.features[0].center[0];

@@ -8,7 +8,7 @@ const getWeather = (lat,long,callback)=>{
         }else if(body.error){
             callback(body.error.message,undefined)
         }else{
-            callback(undefined,body.current.condition)
+            callback(undefined,body.current)
         }
     })
 }

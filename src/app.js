@@ -45,10 +45,14 @@ app.get('/weather',(req,res)=>{
                 error: err
             })
         }
-        getWeather(lat,long,(err,{text}={})=>{
+        getWeather(lat,long,(err,{condition,wind_kph,humidity,temp_c,feelslike_c}={})=>{
             res.send({
                 place: Place,
-                forecast: text
+                forecast: condition.text,
+                humidity: humidity,
+                temp: temp_c,
+                feels: feelslike_c,
+                wind: wind_kph
             })
         })
     })
@@ -57,13 +61,14 @@ app.get('/weather',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about',{
         title: 'About Page...',
-        Name: "@Blaze"
+        Name: "Blaze",
+        Desc: "It uses forecast data from WeatherAPI and Geolocation data from Mapbox"
     })
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
         title: 'Help Page...',
-        Name: 'Blaze'
+        Name: 'Bhai isme kya help chahiye.'
     })
 })
 app.get('/help/*',(req,res)=>{
