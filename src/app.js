@@ -5,6 +5,7 @@ const geoCode = require('./Utils/geoCode')
 const getWeather = require('./Utils/getWeather')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define path for express config
 const publicPath = path.join(__dirname,'../public')
@@ -20,8 +21,8 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicPath))
 
 //Start server
-app.listen(3000,()=>{
-    console.log('Server is running on Port: 3000')
+app.listen(port,()=>{
+    console.log('Server is running on Port: ' + port)
 })
 
 app.get('',(req,res)=>{
